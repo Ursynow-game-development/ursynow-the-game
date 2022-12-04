@@ -23,7 +23,7 @@
         {
             "type": "cppbuild",
             "label": "C/C++: cl.exe kompiluj aktywny plik",
-            "command": "cl.exe",
+            "command": "plik.exe",
             "args": [
                 "/Zi",
                 "/EHsc",

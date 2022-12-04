@@ -1,7 +1,4 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
@@ -32,7 +29,7 @@
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
-            "miDebuggerPath": "C:/MinGW/bin/gdb.exe",
+            "miDebuggerPath": "G:/GitHub/msys64/mingw64/bin/cpp.exe",
             "setupCommands": [
                 {
                     "description": "Włącz formatowanie kodu dla gdb",
@@ -40,12 +37,37 @@
                     "ignoreFailures": true
                 },
                 {
-                    "description":  "Ustaw wariant dezasemblacji na Intel",
+                    "description": "Ustaw wariant dezasemblacji na Intel",
                     "text": "-gdb-set disassembly-flavor intel",
                     "ignoreFailures": true
                 }
             ]
+        },
+        {
+            "name": "C/C++: g++.exe Kompiluj i debuguj aktywny plik",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "C:\\Program Files\\CodeBlocks\\MinGW\\bin",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:\\Program Files\\CodeBlocks\\MinGW\\bin\\gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Włącz formatowanie kodu dla gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Ustaw wariant dezasemblacji na Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "C/C++: g++.exe kompiluj aktywny plik"
         }
-
     ]
 }

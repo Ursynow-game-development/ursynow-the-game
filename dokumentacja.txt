@@ -1,0 +1,5 @@
+== O co tu wgl chodzi? ==
+plik.exe - jakieś coś czego sie nie da usunąć i nie wiem po co to jest w ogóle
+a.exe - gra która działa
+.vscode - losowe rzeczy bez których gra nie zadziała
+plik.cpp - główny plik
