@@ -35,7 +35,7 @@ void r() {
 void end() {
     say("");
     say("PRZEGRALES. Gra konczy sie w tym miejscu");
-    cout << "Udaslo ci sie zebrac " << respekt << " punktow respektu" << endl;
+    cout << "Udalo ci sie zebrac " << respekt << " punktow respektu" << endl;
     say("");
     say("Jakies ostatnie slowa?");
     cin >> uA;  
@@ -240,7 +240,7 @@ int main()
     }
 
     // ETAP 4 - BUNKIER
-    say("Zauwazasz wejscie do bunkra i bez wachania tam wskakujesz. Koniec fabuly")
+    say("Zauwazasz wejscie do bunkra i bez wachania tam wskakujesz. Koniec fabuly");
     cin >> uA;
 
     return 0;
