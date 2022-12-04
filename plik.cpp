@@ -32,17 +32,35 @@ void r() {
     uA = "";
 }
 
+void end() {
+    say("");
+    say("PRZEGRALES. Gra konczy sie w tym miejscu");
+    cout << "Udaslo ci sie zebrac " << respekt << " punktow respektu" << endl;
+    say("");
+    say("Jakies ostatnie slowa?");
+    cin >> uA;  
+    exit(0);
+}
+
 // funkcja eksperymentalna
 
 int main()
 {
     setlocale(LC_CTYPE, "Polish");
     //Wstep
-    say("URSYNOW - The game");
-    say("Czy chcialbys zagrac w ta swietna gre? (t/n)");
+    say("##   ##  ######    #####   ##    ##  ##   ##    ###    ##   ## ");
+    say("##   ##  ##   ##  ##   ##   ##  ##   ###  ##   ## ##   ##   ## ");
+    say("##   ##  ##   ##   ###       ####    #### ##  ##   ##  ## # ## ");
+    say("##   ##  ######      ###      ##     ## ####  ##   ##  ####### ");
+    say("##   ##  ##   ##  ##   ##     ##     ##  ###   ## ##   ### ### ");
+    say(" #####   ##   ##   #####      ##     ##   ##    ###    ##   ## ");
+    say("                         THE GAME                              ");
+    say("");
+    say("       Czy chcialbys zagrac w ta swietna gre? (t/n)            ");
     check("t");
     
-    say("Witaj w tekstowej przygodowce URSYNoW THE GAME. Podczas gry bedziesz gromadzil punkty respektu. Aby wybrac odpowiedz wpisz jej numer. Zaczynajmy.");
+    say("Witaj w tekstowej przygodowce URSYNOW THE GAME. Twoj cel to przezycie jak najdluzej sie da gromadzac jak najwiecej punktow repsektu. Zaczynajmy");
+    say("");
     say("Budzisz sie w lesie obok parku polskich 'wynalazcow'. Co robisz?");
     say("\t 1. Ide do Fortecy");
     say("\t 2. Ide na gorke");
@@ -65,18 +83,18 @@ int main()
         else if (uA == "2") {
             r();
             say("Idziesz bic sie z ekologami, ale jestes takim mieczkiem, ze walka nie trwa dluzej niz 5 minut. Mowiac w skrocie nie zyjesz");
-            return 0;
+            end();
         } 
         else {
-            return 0;
+            end();
         }
 
     } else if (uA == "3") {
         r();
         say("W drodze do domu postanowiles zatanczyc makarene i polamales sobie wszystkie kosci. Mowiac w skrocie nie zyjesz");
-        return 0;
+        end();
     } else if (uA != "1" && uA != "2" && uA != "3"){
-        return 0;
+        end();
     }
 
     //Etap 2 - Forteca
@@ -94,13 +112,13 @@ int main()
         say("W ktora strone kopiesz?");
         say("\t 1. W dol");
         say("\t 2. Do przodu");
-      say("\t 3. Na wschod"); 
+        say("\t 3. Na wschod"); 
 
         cin >> uA;
         if (uA == "1") {
             r();
             say("Dokopujesz sie do Chin i wypadasz z Ziemi. Mowiac w skrocie nie zyjesz");
-            return 0;
+            end();
         }
         else if (uA == "2") {
             respekt = respekt + 30;
@@ -108,10 +126,10 @@ int main()
         else if (uA == "3") {
             r();
             say("Nie starcza ci tlenu i umierasz");
-            return 0;
+            end();
         } 
         else {
-            return 0;
+            end();
         }
 
     } else if (uA == "3") {
@@ -127,41 +145,103 @@ int main()
         else if (uA == "2") {
             r();
             say("Otwierajac klodke postanawiasz zatanczyc makarene i lamiesz sobie wszystkie kosci. Mowiac w skrocie nie zyjesz");
-            return 0;
+            end();
         } 
         else {
-            return 0;
+            end();
         }
     } else if (uA != "1" && uA != "2" && uA != "3"){
-        return 0;
+        end();
     }
 
     // Etap 3 - Forteca w srodku
     r();
     say("Udalo ci sie wejsc do Fortecy. Gdzie idziesz?");
-    say("\t 1. Do strzelnicy"); //Od tad do zmiany
+    say("\t 1. Do strzelnicy");
     say("\t 2. Na wysypisko");
     say("\t 3. Przez korytarz");
     say("\t 4. Na gruzy");
     cin >> uA;
 
-    if (uA == "1") {
+    if (uA == "1") { //ODPOWIEDZ 1
+        r();
+        say("Na strzelnicy zauwaza cie podejrzany typ z maczeta. Co robisz?");
+        say("\t 1. Biore badyla z ziemi i walcze");
+        say("\t 2. Uciekam");
+        say("\t 3. Tancze makarene"); 
 
-    } 
+        cin >> uA;
+        if (uA == "1") { //1-1
+            r();
+            say("Chyba domyslasz sie ze trudno walczyc badylem z typem z maczeta. Sam juz wiesz co sie stalo");
+            end();
+        }
+        else if (uA == "2") { //1-2
+            respekt = respekt - 20;
+            r();
+            say("Przez ucieczke starciles 20 punktow respektu, ale na razie musisz zdecydowac W ktora strone uciekasz.");
+            say("\t 1. Do przodu");
+            say("\t 2. Do tylu");
+            say("\t 3. W lewo"); 
+
+            cin >> uA;
+            if (uA == "1")  //1-2-1
+            {
+                r();
+                say("Gosciu rzuca w ciebie maczeta. Widzisz jak ziemia podnosi sie do gory i uderza cie w twarz. Mowiac w skrocie nie zyjesz");
+                end();
+            }
+
+            else if (uA == "2") //1-2-2
+            {
+                say("Zostales dogoniony i jestes ded");
+                end();
+            }
+            
+            else if (uA == "3") {respekt = respekt + 5;} 
+            else if (uA != "1" && uA != "2" && uA != "3") {end();}
+        } 
+        else if (uA == "3") {
+            r();
+            say("Postanowiles zatanczyc makarene i polamales sobie wszystkie kosci. Mowiac w skrocie nie zyjesz");
+            end();
+        } 
+        else if (uA != "1" && uA != "2" && uA != "3"){
+            end();
+        }
+    }
+    
     else if (uA == "2") {
+        r();
+        say("Jestes na wysypisku... i co dalej?");
+        say("\t 1. Zawracam do korytarza");
+        say("\t 2. Grzebie w smieciach");
 
-    }
-    else if (uA == "3") {
+        cin >> uA;
+        if (uA == "1") {respekt = respekt + 5;}
 
+        else if (uA == "2") //1-2-2
+        {
+            say("Znajdujesz grzyb z super mario. Postanowiles go zjesc i zaczynasz widziec na kolorowo. Czujesz sie zmeczony i kladziesz sie spac. Czyli umarles gratulacje.");
+            end();
+        }
+        else if (uA != "1" && uA != "2") {end();}
     }
+
+    else if (uA == "3") {respekt = respekt + 10;}
+
     else if (uA == "4") {
-
+        say("Gdy wspiales sie na gruzy stwierdziles ze to dobry moment na zatanczenie makareny. Tanczac makarene polamales sobie wszystkie kosci. Mowiac w skrocie nie zyjesz");
+        end();
     }
+
     else if (uA != "1" && uA != "2" && uA != "3" && uA != "4"){
-        return 0;
+        end();
     }
 
-
+    // ETAP 4 - BUNKIER
+    say("Zauwazasz wejscie do bunkra i bez wachania tam wskakujesz. Koniec fabuly")
+    cin >> uA;
 
     return 0;
 }
