@@ -17,6 +17,26 @@
             "problemMatcher": [
                 "$gcc"
             ],
+            "group": "build",
+            "detail": "Zadanie wygenerowane przez debuger."
+        },
+        {
+            "type": "cppbuild",
+            "label": "C/C++: cl.exe kompiluj aktywny plik",
+            "command": "cl.exe",
+            "args": [
+                "/Zi",
+                "/EHsc",
+                "/nologo",
+                "/Fe${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "${file}"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$msCompile"
+            ],
             "group": {
                 "kind": "build",
                 "isDefault": true

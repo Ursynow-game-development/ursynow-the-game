@@ -37,15 +37,15 @@ void r() {
 int main()
 {
     setlocale(LC_CTYPE, "Polish");
-    //Wstęp
-    say("Witaj w URSYNÓW THE GAME");
-    say("Czy chciałbyś zagrać w tą świetną grę? (t/n)");
+    //Wstep
+    say("URSYNOW - The game");
+    say("Czy chcialbys zagrac w ta swietna gre? (t/n)");
     check("t");
     
-    say("Witaj w tekstowej przygodówce URSYNÓW THE GAME. Podczas gry będziesz gromadził punkty respektu. Aby wybrać odpowiedź wpisz jej numer. Zaczynajmy.");
-    say("Budzisz się w lesie obok parku polskich 'wynalazców'. Co robisz?");
-    say("\t 1. Idę do Fortecy");
-    say("\t 2. Idę na górkę");
+    say("Witaj w tekstowej przygodowce URSYNoW THE GAME. Podczas gry bedziesz gromadzil punkty respektu. Aby wybrac odpowiedz wpisz jej numer. Zaczynajmy.");
+    say("Budzisz sie w lesie obok parku polskich 'wynalazcow'. Co robisz?");
+    say("\t 1. Ide do Fortecy");
+    say("\t 2. Ide na gorke");
     say("\t 3. Wracam do domu");
 
     //Etap 1 - Przebudzenie
@@ -54,9 +54,9 @@ int main()
         respekt = respekt + 20;
     } else if (uA == "2") {
         r();
-        say("Po drodze widzisz gang ekologów przepędzających ludzi z górki. Co robisz?");
-        say("\t 1. Postanawiam ominąć ich i iść do Fortecy");
-        say("\t 2. Idę się bić");
+        say("Po drodze widzisz gang ekologow przepedzajacych ludzi z gorki. Co robisz?");
+        say("\t 1. Postanawiam ominac ich i isc do Fortecy");
+        say("\t 2. Ide sie bic");
 
         cin >> uA;
         if (uA == "1") {
@@ -64,7 +64,7 @@ int main()
         }
         else if (uA == "2") {
             r();
-            say("Idziesz bić się z ekologami, ale jesteś takim mięczkiem, że walka nie trwa dłużej niż 5 minut. Mówiąc w skrócie nie żyjesz");
+            say("Idziesz bic sie z ekologami, ale jestes takim mieczkiem, ze walka nie trwa dluzej niz 5 minut. Mowiac w skrocie nie zyjesz");
             return 0;
         } 
         else {
@@ -73,7 +73,7 @@ int main()
 
     } else if (uA == "3") {
         r();
-        say("W drodze do domu postanowiłeś zatańczyć makarenę i połamałeś sobie wszystkie kości. Mówiąc w skrócie nie żyjesz");
+        say("W drodze do domu postanowiles zatanczyc makarene i polamales sobie wszystkie kosci. Mowiac w skrocie nie zyjesz");
         return 0;
     } else if (uA != "1" && uA != "2" && uA != "3"){
         return 0;
@@ -81,25 +81,25 @@ int main()
 
     //Etap 2 - Forteca
     r();
-    say("Dotarłeś do FORTECY. Widzisz dookoła płot którego nie jesteś w stanie przeskoczyć. Jak się tam dostaniesz?");
+    say("Dotarles do FORTECY. Widzisz dookola plot ktorego nie jestes w stanie przeskoczyc. Jak sie tam dostaniesz?");
     say("\t 1. Podkopem");
-    say("\t 2. Przez metalową bramę");
-    say("\t 3. Przez bramę główną");
+    say("\t 2. Przez metalowa brame");
+    say("\t 3. Przez brame glowna");
     cin >> uA;
 
     if (uA == "2") {
         respekt = respekt + 10;
     } else if (uA == "1") {
         r();
-        say("W którą stronę kopiesz?");
-        say("\t 1. W dół");
+        say("W ktora strone kopiesz?");
+        say("\t 1. W dol");
         say("\t 2. Do przodu");
-        say("\t 3. Na wschód");
+      say("\t 3. Na wschod"); 
 
         cin >> uA;
         if (uA == "1") {
             r();
-            say("Dokopujesz się do Chin i wypadasz z Ziemi. Mówiąc w skrócie nie żyjesz");
+            say("Dokopujesz sie do Chin i wypadasz z Ziemi. Mowiac w skrocie nie zyjesz");
             return 0;
         }
         else if (uA == "2") {
@@ -116,9 +116,9 @@ int main()
 
     } else if (uA == "3") {
         r();
-        say("Brama jest zablokowana przez kłódkę. Co robisz?");
-        say("\t 1. Wyważam ją metalowym drążkiem");
-        say("\t 2. Próbuję otworzyć ją wytrychem");
+        say("Brama jest zablokowana przez klodke. Co robisz?");
+        say("\t 1. Wywazam ja metalowym drazkiem");
+        say("\t 2. Probuje otworzyc ja wytrychem");
 
         cin >> uA;
         if (uA == "1") {
@@ -126,7 +126,7 @@ int main()
         }
         else if (uA == "2") {
             r();
-            say("Otwierając kłódkę postanawiasz zatańczyć makarenę i łamiesz sobie wszystkie kości. Mówiąc w skrócie nie żyjesz");
+            say("Otwierajac klodke postanawiasz zatanczyc makarene i lamiesz sobie wszystkie kosci. Mowiac w skrocie nie zyjesz");
             return 0;
         } 
         else {
@@ -136,10 +136,10 @@ int main()
         return 0;
     }
 
-    // Etap 3 - Forteca w środku
+    // Etap 3 - Forteca w srodku
     r();
-    say("Udało ci się wejść do Fortecy. Gdzie idziesz?");
-    say("\t 1. Do strzelnicy"); //Od tąd do zmiany
+    say("Udalo ci sie wejsc do Fortecy. Gdzie idziesz?");
+    say("\t 1. Do strzelnicy"); //Od tad do zmiany
     say("\t 2. Na wysypisko");
     say("\t 3. Przez korytarz");
     say("\t 4. Na gruzy");
