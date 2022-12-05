@@ -2,7 +2,6 @@
 #include <string>
 #include <locale.h>
 #include <windows.h>
-#include <stdlib.h>
 #include <shellapi.h>
 
 using namespace std;
@@ -127,11 +126,9 @@ void jedzenie() {
     }
 }
 
-
 int main()
 {
     setlocale(LC_CTYPE, "Polish");
-    // MENU GŁÓWNE
     say("##   ##  ######    #####   ##    ##  ##   ##    ###    ##   ## ");
     say("##   ##  ##   ##  ##   ##   ##  ##   ###  ##   ## ##   ##   ## ");
     say("##   ##  ##   ##   ###       ####    #### ##  ##   ##  ## # ## ");
@@ -216,7 +213,6 @@ int main()
         else {
             end();
         }
-
     } 
     else if (uA == "3") {
         r();
@@ -343,8 +339,7 @@ int main()
     else if (uA == "2") {
         say("Idziesz do tyłu a tam nagle...");
         Sleep(1500);
-        for(int i=0; i<15; i++)
-        {
+        for(int i=0; i<15; i++) {
             system(std::string("start https://www.youtube.com/watch?v=dQw4w9WgXcQ").c_str());
         } 
         Sleep(1500);
@@ -356,12 +351,10 @@ int main()
         say("Masz jeszcze dwie drogi");
         say("\t 1. Ide dalej prosto");
         say("\t 2. Skrecam jeszcze bardziej w lewo");
-
         cin >> uA;
         if (uA == "1") {jedzenie();}
 
-        else if (uA == "2") //1-2-2
-        {
+        else if (uA == "2") {
             say("Uderzasz w sciane i umierasz.");
             end();
         }
@@ -372,12 +365,10 @@ int main()
         say("Masz jeszcze dwie drogi.");
         say("\t 1. Ide dalej prosto");
         say("\t 2. Skrecam jeszcze bardziej w prawo");
-
         cin >> uA;
         if (uA == "1") {respekt = respekt + 15;}
 
-        else if (uA == "2") //1-2-2
-        {
+        else if (uA == "2") {
             say("Uderzasz w sciane i umierasz.");
             end();
         }
@@ -390,7 +381,7 @@ int main()
     // Etap 5 - Pokój
 
     r();
-    say("Dochodzisz do tajemniczego pokoju. Koniuec fabuly");
+    say("Dochodzisz do tajemniczego pokoju. Koniec fabuly");
     cin >> uA;
 
     return 0;
