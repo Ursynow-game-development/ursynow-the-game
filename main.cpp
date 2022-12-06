@@ -11,7 +11,6 @@ void say(string toSay);
 void respect();
 void end();
 
-// voidy gra
 void jedzenie();
 
 string userAnswer; // Odpowiedź gracza
@@ -27,7 +26,6 @@ int main()
     say("##   ##  ##   ##  ##   ##     ##     ##  ###   ## ##   ### ### ");
     say(" #####   ##   ##   #####      ##     ##   ##    ###    ##   ## ");
     say("                         THE GAME                              ");
-    say("");
     say("       Czy chcialbys zagrac w ta swietna gre? (t/n)            ");
     check("t");
     
@@ -88,9 +86,9 @@ int main()
     else if (userAnswer == "1") {
         respect();
         say("W ktora strone kopiesz?");
-            say("\t 1. W dol");
-            say("\t 2. Do przodu");
-            say("\t 3. Na wschod"); 
+        say("\t 1. W dol");
+        say("\t 2. Do przodu");
+        say("\t 3. Na wschod"); 
         cin >> userAnswer;
         if (userAnswer == "1") {
             say("Dokopujesz sie do Chin i wypadasz z Ziemi. Mowiac w skrocie nie zyjesz");
@@ -133,18 +131,18 @@ int main()
 
     respect();
     say("Udalo ci sie wejsc do Fortecy. Gdzie idziesz?");
-        say("\t 1. Do strzelnicy");
-        say("\t 2. Na wysypisko");
-        say("\t 3. Przez korytarz");
-        say("\t 4. Na gruzy");
+    say("\t 1. Do strzelnicy");
+    say("\t 2. Na wysypisko");
+    say("\t 3. Przez korytarz");
+    say("\t 4. Na gruzy");
     cin >> userAnswer;
 
     if (userAnswer == "1") { //ODPOWIEDZ 1
         respect();
         say("Na strzelnicy zauwaza cie podejrzany typ z maczeta. Co robisz?");
-            say("\t 1. Biore badyla z ziemi i walcze");
-            say("\t 2. Uciekam");
-            say("\t 3. Tancze makarene"); 
+        say("\t 1. Biore badyla z ziemi i walcze");
+        say("\t 2. Uciekam");
+        say("\t 3. Tancze makarene"); 
         cin >> userAnswer;
         if (userAnswer == "1") { //1-1
             say("Chyba domyslasz sie ze trudno walczyc badylem z typem z maczeta. Sam juz wiesz co sie stalo");
@@ -334,9 +332,9 @@ void jedzenie() {
         say("");
         say("Instrukcja uzywania pistoletu: bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.");
         say("");
-        Sleep(2500);
+        Sleep(4000);
         say("Dobra to pewnie nic waznego nie takie rzeczy robilem za dzieciaka");
-        Sleep(1000);
+        Sleep(2000);
         Beep(600,500);
         say("Twoje skille pistoletem to jakis dramat. Celujesz lufa do siebie i dedasz. Czlowieku szkoda mi slow aby to opisac");
         Sleep(2000);

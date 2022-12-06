@@ -1,6 +1,4 @@
 # Ursynów the game
-najlepsza gra tekstowa we wszechświecie.
-=======
 Najlepsza tekstowa gra przygodowa we wszechświecie.
 
 # O co tu chodzi?
