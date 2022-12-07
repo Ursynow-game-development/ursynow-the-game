@@ -212,6 +212,7 @@ int main()
             say("mowiac w skrocie umierasz");
             end();
         case 3:
+            respekt = respekt + 15;
             respect();
             say("Masz jeszcze dwie drogi");
             say("\t 1. Ide dalej prosto");
@@ -248,15 +249,106 @@ int main()
     // ETAP 5 - POKÓJ
 
     respect();
-    say("Dochodzisz do tajemniczego pokoju. Koniec fabuly");
+    say("Dochodzisz do tajemniczego pokoju. Drzwi zamykaja sie za toba i jestes uwieziony. Nic nie widzisz, jest ciemno jak zawsze na ursynowie. Co robisz?");
+    say("\t 1. Tancze makarene");
+    say("\t 2. Ide przed siebie");
+    say("\t 3. Wolam o pomoc");
+    say("\t 4. Odpalam komputer");
+    cin >> userAnswer;
+
+    switch (stoi(userAnswer)) 
+    {
+        case 1:
+            say("Tanczac makarene lamiesz sobie wszystkie kosci i umierasz");
+            end();
+        case 2:
+            say("Idac przed siebie trafiasz na dzikiego pokemona. Co robisz?");
+            say("\t 1. Walcze z nim");
+            say("\t 2. Uciekam");
+            cin >> userAnswer;
+
+            switch (stoi(userAnswer)) {
+                case 1:
+                    say("Du du du (Dramatyczna muzyka gra)");
+                    Sleep(2000);
+                    say("ty: ikjhbgfdsjibgds wybieram cie");
+                    Sleep(2000);
+                    say("przeciwnik: ze co kurna?");
+                    Sleep(2000);
+                    say("ty: ikjhbgfdsjibgds do ataku");
+                    Sleep(2000);
+                    say("ikjhbgfdsjibgds zabil przecienika sila woli. Zdobywasz 75 punktow respektu");
+                    respekt = respekt + 75;
+                    goto exit_5loop;         
+                case 2:
+                    say("Dedasz bo nie umiesz biegac");
+                    end();
+            }
+
+        case 3:
+            say("Co konkretnie krzyczysz?");
+            say("\t 1. Huahuahuahua!!!!11!!");
+            say("\t 2. ohohohohohoohohohohhohoh!!@!@!@!@1!1");
+            cin >> userAnswer;
+
+            switch (stoi(userAnswer)) {
+                case 1:
+                    say("huahuahuahuauahauhahuahuauh");
+                    Sleep(1500);
+                    say("afjghrgsnbilosrhgishgniorshn");
+                    Sleep(1500);
+                    say("huahu8ahuuhauhauhuhahauhua");
+                    Sleep(1500);
+                    say("bruh");
+                    Sleep(1500);
+                    say("o kurde jakie ja zaklecia wymawiam");
+                    Sleep(1500);
+                    say("dzieje sie cos niefajnego czyli umierasz");
+                    end();
+                case 2:
+                    say("ty: ohohohohohohohohohohoho");
+                    say("zrobilo ci sie lepiej i udaje ci sie paranormalnie przejsc dalej");
+                    respekt = respekt + 5;
+                    goto exit_5loop;
+            }
+        case 4:
+            say("__________________");
+            say("|   windows 10    |");
+            say("|aktualizowanie...|");
+            say("__________________");
+            Sleep(1000);
+            say("No i co teraz robisz?");
+            say("\t 1. Czekam az sie zaktualizuje");
+            say("\t 2. mam to gdzies");
+            cin >> userAnswer;
+
+            switch (stoi(userAnswer)) {
+                case 1:
+                    say("umierasz ze starosci");
+                    end();
+                case 2:
+                    say("masz to gdzies i idzesz dalej");
+                    respekt = respekt + 10;
+                    goto exit_5loop;
+            }
+        exit_5loop:;
+            
+    }
+    
+    // ETAP 6 - ZDARZENIE W POKOJU
+
+    respect();
+    say("Koniec fabuly");
     cin >> userAnswer;
 
     return 0;
 }
 
-// ========================
-// === FUNKCJE ============
-// ========================
+
+// =====================================================
+// === FUNKCJE =========================================
+// =====================================================
+
 
 void check(string answer) {
     cin >> userAnswer;
@@ -357,6 +449,7 @@ void jedzenie() {
         case 7:
             say("Otwierasz pudelko i wyskakuje z niego pan mieczyslaw ktory zabija cie swoja maczeta. giniesz");
             end();
+
         exit_loop2:;
     }
-}
+} 
