@@ -1,3 +1,5 @@
+![](https://i.ibb.co/mXh9RK7/LOGOBANER.png)
+
 # Ursynów the game
 Najlepsza tekstowa gra przygodowa we wszechświecie.
 
