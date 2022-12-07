@@ -17,6 +17,9 @@ int respekt; // Punkty respektu
 
 int main()
 {
+    say("uwaga granie w ta gre moze wywolac nieodwracalne uszkodzenia w mozgo");
+    say("");
+    Sleep(2000);
     say("##   ##  ######    #####   ##    ##  ##   ##    ###    ##   ## ");
     say("##   ##  ##   ##  ##   ##   ##  ##   ###  ##   ## ##   ##   ## ");
     say("##   ##  ##   ##   ###       ####    #### ##  ##   ##  ## # ## ");
