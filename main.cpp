@@ -9,6 +9,7 @@ void check(string answer);
 void say(string toSay);
 void respect();
 void end();
+void win();
 
 void jedzenie();
 
@@ -338,20 +339,99 @@ int main()
             
     }
     
-    // ETAP 6 - ZDARZENIE W POKOJU
+    // ETAP 6 - ZDARZENIE W POKOJU (OSTATNI)
 
     respect();
-    say("Koniec fabuly");
+    say("Pokoj zaczyna zalamywac czasoprzestrzen. Wszystko zaczyna byc coraz bardziej dziwne. Co robisz?");
+    say("\t 1. Klade sie na ziemi i krzycze");
+    say("\t 2. Rzucam sie do dziury");
+    say("\t 3. Przeciskam sie przez okno");
+    say("\t 4. Klade sie spac");
     cin >> userAnswer;
 
-    return 0;
-}
+    switch (stoi(userAnswer)) 
+    {
+        case 1:
+            respect();
+            say("To by nic nie dalo. nie dalo by nic.");
+            say("\t 1. No faktycznie");
+            say("\t 2. Nie no moze jednak");
+            say("\t 3. Nie no na pewno by dalo");
+            cin >> userAnswer;
 
+            switch (stoi(userAnswer)) {
+                case 1:
+                    respekt = respekt + 10;
+                    say("No faktycznie nie dalo by nic");
+                    goto exit_7loop;
+                case 2:
+                    respekt = respekt - 10;
+                    respect();
+                    say("To w koncu jak?");
+                    say("\t 1. To jednak by nic nie dalo");
+                    say("\t 2. To jednak by cos dalo");
+                    say("\t 3. A walic to wyjezdzam w bieszczady"); 
+                    cin >> userAnswer;
+
+                    switch (stoi(userAnswer)) {
+                        case 1:
+                            respekt = respekt + 10;
+                            respect();
+                            say("No faktycznie, to by nic nie dalo");
+                            goto exit_7loop;
+                        case 2:
+                            say("to by nic nie dalo nie dalo by nic");
+                            end();
+                        case 3:
+                            say("W bieszczadach porywa cie grzybiarz i giniesz");
+                            end();
+                    }
+            }    
+        case 2:
+            respect();
+            say("Rzuczasz sie do dziury i co dalej?");
+            say("\t 1. Lece bo nie chce");
+            say("\t 2. Lece bo chce");
+            cin >> userAnswer;
+
+            switch (stoi(userAnswer)) {
+                case 1:
+                    say("Lecisz bo chcesz i giniesz od upadku");
+                    end();
+                case 2:
+                    say("Lecisz bo nie chcesz i giniesz od upadku");
+                    end();
+            }   
+        case 3:
+            respekt = respekt + 40;
+            goto exit_7loop;
+        case 4:
+            say("Idziesz spac a gdy sie budzisz nie zyjesz");
+            end();
+
+        exit_7loop:;
+    }
+    win();
+}
 
 // =====================================================
 // === FUNKCJE =========================================
 // =====================================================
 
+void win() {
+    say("Po wielu trudach...");
+    Sleep(1500);
+    say("Oraz zmaganiach...");
+    Sleep(1500);
+    say("Wygrales");
+    Sleep(500);
+    say("Gratuluje");
+    Sleep(1500);
+    say("To jest oficjalny koniec Ursynow The Game.");
+    say(to_string(respekt));
+    say("Tyle punktow respektu udalo ci sie zdobyc w ciagu twojej gry. mozesz teraz zaszpanowac na dzielni");
+    cin >> userAnswer;
+}
 
 void check(string answer) {
     cin >> userAnswer;
